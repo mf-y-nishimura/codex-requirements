@@ -1,3 +1,25 @@
+[features]
+browser_use = false
+computer_use = false
+in_app_browser = false
+multi_agent = false
+
+allowed_approval_policies = ["untrusted", "on-request"]
+allowed_sandbox_modes = ["read-only", "workspace-write"]
+allowed_web_search_modes = ["disabled"]
+
+[permissions.filesystem]
+deny_read = [
+  ".env",
+  "**/.env",
+  ".env.*",
+  "**/.env.*",
+  "*credential*",
+  "*credentials*",
+  "~/.ssh/**",
+  "~/.aws/**",
+]
+
 [rules]
 prefix_rules = [
   { pattern = [{ token = "echo" }, { token = "codex-requirements-test" }], decision = "forbidden", justification = "テスト用: requirements.toml が有効です。" },
