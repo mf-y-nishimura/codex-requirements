@@ -32,8 +32,10 @@ Codex を再起動すると反映されます。
 破壊的なコマンドではなく、次の非破壊コマンドで有効性を確認できます。
 
 ```bash
-echo codex-requirements-test
+echo codex-requirements-test を実行してみて
 ```
+<img width="738" height="582" alt="image" src="https://github.com/user-attachments/assets/838bda41-3f16-41a6-939f-13e138383186" />
+
 
 `requirements.toml` が反映されていれば、次の理由で拒否されます。
 
