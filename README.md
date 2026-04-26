@@ -34,14 +34,15 @@ Codex を再起動すると反映されます。
 ```bash
 echo codex-requirements-test を実行してみて
 ```
-<img width="738" height="582" alt="image" src="https://github.com/user-attachments/assets/838bda41-3f16-41a6-939f-13e138383186" />
-
 
 `requirements.toml` が反映されていれば、次の理由で拒否されます。
 
 ```text
 テスト用: requirements.toml が有効です。
 ```
+
+<img width="738" height="582" alt="image" src="https://github.com/user-attachments/assets/838bda41-3f16-41a6-939f-13e138383186" />
+
 
 ## 注意
 
