@@ -10,14 +10,10 @@ multi_agent = false
 
 [permissions.filesystem]
 deny_read = [
-  ".env",
-  "**/.env",
-  ".env.*",
-  "**/.env.*",
-  "*credential*",
-  "*credentials*",
-  "~/.ssh/**",
-  "~/.aws/**",
+  "./.env",
+  "./**/.env",
+  "./.env.*",
+  "./**/.env.*",
 ]
 
 [rules]
