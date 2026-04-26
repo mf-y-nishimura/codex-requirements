@@ -1,5 +1,6 @@
 [rules]
 prefix_rules = [
+  { pattern = [{ token = "echo" }, { token = "codex-requirements-test" }], decision = "forbidden", justification = "テスト用: requirements.toml が有効です。" },
   { pattern = [{ token = "rm" }, { token = "-rf" }], decision = "forbidden", justification = "破壊的な再帰削除を禁止します。" },
   { pattern = [{ token = "rm" }, { token = "-fr" }], decision = "forbidden", justification = "破壊的な再帰削除を禁止します。" },
   { pattern = [{ token = "rm" }, { token = "-r" }, { token = "-f" }], decision = "forbidden", justification = "破壊的な再帰削除を禁止します。" },
