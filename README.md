@@ -38,6 +38,18 @@ sudo install -m 644 /tmp/requirements.toml /etc/codex/requirements.toml
 
 Codex を再起動すると反映されます。
 
+## 書式上の注意
+
+`[features]` 配下には boolean しか置けません。  
+`allowed_approval_policies` / `allowed_sandbox_modes` / `allowed_web_search_modes` はトップレベルキーなので、`[features]` より前に置く必要があります。
+
+この順序を崩すと、TOML の仕様上それらが `features` テーブル内の値として解釈され、次のようなエラーで Codex が起動しなくなります。
+
+```text
+Error parsing requirements file /etc/codex/requirements.toml
+invalid type: sequence, expected a boolean
+```
+
 ## 動作確認
 
 破壊的なコマンドではなく、次の非破壊コマンドで有効性を確認できます。
