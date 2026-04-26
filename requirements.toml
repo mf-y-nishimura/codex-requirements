@@ -1,0 +1,15 @@
+[rules]
+prefix_rules = [
+  { pattern = [{ token = "rm" }, { token = "-rf" }], decision = "forbidden", justification = "破壊的な再帰削除を禁止します。" },
+  { pattern = [{ token = "rm" }, { token = "-fr" }], decision = "forbidden", justification = "破壊的な再帰削除を禁止します。" },
+  { pattern = [{ token = "rm" }, { token = "-r" }, { token = "-f" }], decision = "forbidden", justification = "破壊的な再帰削除を禁止します。" },
+  { pattern = [{ token = "rm" }, { token = "-f" }, { token = "-r" }], decision = "forbidden", justification = "破壊的な再帰削除を禁止します。" },
+  { pattern = [{ token = "git" }, { token = "reset" }, { token = "--hard" }], decision = "forbidden", justification = "未保存変更を破棄する履歴操作を禁止します。" },
+  { pattern = [{ token = "git" }, { token = "checkout" }, { token = "--" }], decision = "forbidden", justification = "作業ツリーの変更破棄を禁止します。" },
+  { pattern = [{ token = "git" }, { token = "clean" }, { token = "-fd" }], decision = "forbidden", justification = "未追跡ファイルの強制削除を禁止します。" },
+  { pattern = [{ token = "git" }, { token = "clean" }, { token = "-df" }], decision = "forbidden", justification = "未追跡ファイルの強制削除を禁止します。" },
+  { pattern = [{ token = "git" }, { token = "clean" }, { token = "-fdx" }], decision = "forbidden", justification = "未追跡ファイルと ignore 対象の強制削除を禁止します。" },
+  { pattern = [{ token = "git" }, { token = "clean" }, { token = "-f" }, { token = "-d" }], decision = "forbidden", justification = "未追跡ファイルの強制削除を禁止します。" },
+  { pattern = [{ token = "git" }, { token = "clean" }, { token = "-d" }, { token = "-f" }], decision = "forbidden", justification = "未追跡ファイルの強制削除を禁止します。" },
+  { pattern = [{ token = "git" }, { token = "clean" }, { token = "-f" }, { token = "-d" }, { token = "-x" }], decision = "forbidden", justification = "未追跡ファイルと ignore 対象の強制削除を禁止します。" },
+]
